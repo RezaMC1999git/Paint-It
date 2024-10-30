@@ -51,7 +51,7 @@ public class Scratch : MonoBehaviour
                                 continue;
                             }
                         }
-                        if(pointsCounter == 3)
+                        if (pointsCounter == 3)
                             AddMask();
                         pointsCounter = 0;
                     }
@@ -75,5 +75,11 @@ public class Scratch : MonoBehaviour
             newMask.waterEffectAnimtor.enabled = true;
         }
         scratckMasksCreated.Add(newMask);
+        if (levelManager.AyesPercentage.Count == 0)
+            return;
+        if (((float)scratckMasksCreated.Count / levelManager.requiredMasksForFinishingLevel) * 100f >= levelManager.AyesPercentage[0]) 
+        {
+            levelManager.PlaySura();
+        }
     }
 }
