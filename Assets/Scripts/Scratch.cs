@@ -79,6 +79,7 @@ public class Scratch : MonoBehaviour
             return;
         if (((float)scratckMasksCreated.Count / levelManager.requiredMasksForFinishingLevel) * 100f >= levelManager.AyesPercentage[0]) 
         {
+            levelManager.AyesPercentage.RemoveAt(0);
             levelManager.PlaySura();
         }
     }

@@ -122,15 +122,11 @@ public class LevelManager : MonoBehaviour
 
     public void PlaySura()
     {
-        if (!playBismAllah) 
+        if (suraSFX.Count > 0) 
         {
-            bismAllahAudioSource.Play();
-            playBismAllah = true;
-            return;
+            fetchedSuras.Enqueue(suraSFX[0]);
+            suraSFX.RemoveAt(0);
         }
-        AyesPercentage.RemoveAt(0);
-        fetchedSuras.Enqueue(suraSFX[0]);
-        suraSFX.RemoveAt(0);
         if (suraCoroutine == null)
         {
             suraCoroutine = StartCoroutine(PlaySuraIE());
@@ -139,6 +135,19 @@ public class LevelManager : MonoBehaviour
 
     public IEnumerator PlaySuraIE()
     {
+        if (!playBismAllah)
+        {
+            bismAllahAudioSource.Play();
+            yield return new WaitForSeconds(6f);
+            playBismAllah = true;
+            if (fetchedSuras.Count != 0)
+            {
+                suraCoroutine = StartCoroutine(PlaySuraIE());
+            }
+            else
+                suraCoroutine = null;
+            yield break;
+        }
         ayeText.gameObject.SetActive(true);
         ayeText.text = surasTexts[0];
         surasTexts.RemoveAt(0);

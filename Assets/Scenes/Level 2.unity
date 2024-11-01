@@ -178,6 +178,8 @@ MonoBehaviour:
   endPanel: {fileID: 63940870}
   levelStarted: 0
   levelFinished: 0
+  ayeText: {fileID: 584306409}
+  numberOfAyeBalloons: 0
   AyesPercentage:
   - 20
   - 30
@@ -185,7 +187,6 @@ MonoBehaviour:
   - 50
   - 60
   - 70
-  ayeText: {fileID: 584306409}
   surasTexts:
   - "\u0642\u064F\u0644\u0652 \u0623\u064E\u0639\u064F\u0648\u0630\u064F \u0628\u0650\u0631\u064E\u0628\u0650\u0651
     \u0627\u0644\u0646\u0651\u064E\u0627\u0633\u0650 "
@@ -197,7 +198,7 @@ MonoBehaviour:
     \u0641\u0650\u06CC \u0635\u064F\u062F\u064F\u0648\u0631\u0650 \u0627\u0644\u0646\u0651\u064E\u0627\u0633\u0650"
   - "\u0645\u0650\u0646\u064E \u0627\u0644\u062C\u0650\u0646\u0651\u064E\u0629\u0650
     \u0648\u064E \u0627\u0644\u0646\u0651\u064E\u0627\u0633\u0650"
-  requiredMasksForFinishingLevel: 650
+  requiredMasksForFinishingLevel: 600
   levelCompleteAudioSource: {fileID: 813585616}
   suraAudioSource: {fileID: 1482264646}
   bismAllahAudioSource: {fileID: 927796590}
@@ -550,8 +551,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 231962301}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2574, y: 0.0515, z: 0}
-  m_LocalScale: {x: 3.3879478, y: 1.8306319, z: 1.4284}
+  m_LocalPosition: {x: -0.0113, y: 0.0433, z: 0}
+  m_LocalScale: {x: 3.21046, y: 1.6563958, z: 1.4284}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 999361126}
@@ -2643,7 +2644,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 7bdff78c80fe10c4da4ad7d067628b47, type: 3}
     - target: {fileID: 2797169685434036180, guid: eeb59529d7cbc8048a01e1e17c51fc2e, type: 3}
       propertyPath: m_Size.x
-      value: 12.163593
+      value: 12.7396755
+      objectReference: {fileID: 0}
+    - target: {fileID: 2797169685434036180, guid: eeb59529d7cbc8048a01e1e17c51fc2e, type: 3}
+      propertyPath: m_Size.y
+      value: 7.140094
       objectReference: {fileID: 0}
     - target: {fileID: 2797169685434036180, guid: eeb59529d7cbc8048a01e1e17c51fc2e, type: 3}
       propertyPath: m_Enabled
@@ -2651,7 +2656,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2797169685434036180, guid: eeb59529d7cbc8048a01e1e17c51fc2e, type: 3}
       propertyPath: m_Offset.x
-      value: 0.24849415
+      value: -0.039546967
+      objectReference: {fileID: 0}
+    - target: {fileID: 2797169685434036180, guid: eeb59529d7cbc8048a01e1e17c51fc2e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.025046945
       objectReference: {fileID: 0}
     - target: {fileID: 2797169685434036180, guid: eeb59529d7cbc8048a01e1e17c51fc2e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -2670,8 +2679,16 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2797169686298643143, guid: eeb59529d7cbc8048a01e1e17c51fc2e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2797169686298643143, guid: eeb59529d7cbc8048a01e1e17c51fc2e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2797169686298643143, guid: eeb59529d7cbc8048a01e1e17c51fc2e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.07
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 2797169686298643143, guid: eeb59529d7cbc8048a01e1e17c51fc2e, type: 3}
       propertyPath: m_LocalPosition.y

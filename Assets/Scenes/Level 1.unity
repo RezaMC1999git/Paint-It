@@ -179,7 +179,7 @@ MonoBehaviour:
   levelStarted: 0
   levelFinished: 0
   ayeText: {fileID: 584306409}
-  numberOfAyeBalloons: 2
+  numberOfAyeBalloons: 1
   AyesPercentage:
   - 20
   - 30
@@ -2087,7 +2087,7 @@ MonoBehaviour:
   balloonPrefab: {fileID: 6042487911190633365, guid: eeb897887ddd9b84c9d8a55490a57907, type: 3}
   balloonPopAudioSource: {fileID: 1046089862}
   balloonsParent: {fileID: 2119014999}
-  numberOfBalloons: 50
+  numberOfBalloons: 100
 --- !u!1 &1649033106
 GameObject:
   m_ObjectHideFlags: 0
