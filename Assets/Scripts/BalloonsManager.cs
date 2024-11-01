@@ -11,24 +11,26 @@ public class BalloonsManager : MonoBehaviour
     [SerializeField] Transform balloonsParent;
     [SerializeField] int numberOfBalloons;
 
-    Vector3 previousBalloonPosition, newBalloonPosition;
+    List<Balloon> allBalloons;
 
     private void Start()
     {
-        previousBalloonPosition = new Vector3(Random.Range(-5, 5), Random.Range(-3, 3), 1f);
+        allBalloons = new List<Balloon>();
 
         for (int i = 0; i < numberOfBalloons; i++)
         {
             Balloon newBalloon = Instantiate(balloonPrefab, balloonsParent);
-            newBalloonPosition = new Vector3(Random.Range(-5, 5), Random.Range(-3, 3), 1f);
-            while(Vector3.Distance(newBalloonPosition, previousBalloonPosition) <= 2f) 
-            {
-                newBalloonPosition = new Vector3(Random.Range(-5, 5), Random.Range(-3, 3), 1f);
-            }
-            newBalloon.transform.position =  newBalloonPosition;
-            previousBalloonPosition = newBalloonPosition;
+            newBalloon.transform.position = new Vector3(Random.Range(-5, 5), Random.Range(-4, 4), 1f);
             newBalloon.balloonSpriteRenderer.sprite = balloonSprites[Random.Range(0, balloonSprites.Count)];
-        }  
+            allBalloons.Add(newBalloon);
+        }
+
+        for (int i = 0; i < LevelManager.numberOfAyeBalloons; i++)
+        {
+            int index = Random.Range(0, allBalloons.Count);
+            allBalloons[index].choosenBalloon = true;
+            allBalloons.RemoveAt(index);
+        }
     }
 
     private void Update()
@@ -55,6 +57,10 @@ public class BalloonsManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         Destroy(baloon.gameObject);
         numberOfBalloons--;
+        if (baloon.transform.GetComponent<Balloon>().choosenBalloon)
+        {
+            LevelManager.PlaySura();
+        }
         if(numberOfBalloons <= 0) 
         {
             LevelManager.StartTheGame();

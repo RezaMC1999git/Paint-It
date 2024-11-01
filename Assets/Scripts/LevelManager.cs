@@ -19,8 +19,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] BoxCollider2D levelShapeBlackAndWhiteColider;
     public GameObject dragGuideHand, dragCircle, endPanel;
     [HideInInspector] public bool levelStarted, levelFinished;
-    public List<float> AyesPercentage;
     [SerializeField] RTLTextMeshPro ayeText;
+    public int numberOfAyeBalloons;
+    public List<float> AyesPercentage;
     [SerializeField] List<string> surasTexts;
     [SerializeField]
     [Range(100, 10000)]
@@ -34,6 +35,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] Queue<AudioClip> fetchedSuras;
     [SerializeField] List<AudioClip> suraSFX;
     Coroutine suraCoroutine;
+    bool playBismAllah;
 
     private void Awake()
     {
@@ -75,7 +77,6 @@ public class LevelManager : MonoBehaviour
         levelStarted = true;
         levelShapeComplete.enabled = true;
         levelShapeBlackAndWhiteColider.enabled = true;
-        bismAllahAudioSource.Play();
         dragGuideHand.SetActive(true);
         yield return new WaitForSeconds(2);
         dragGuideHand.SetActive(false);
@@ -121,6 +122,12 @@ public class LevelManager : MonoBehaviour
 
     public void PlaySura()
     {
+        if (!playBismAllah) 
+        {
+            bismAllahAudioSource.Play();
+            playBismAllah = true;
+            return;
+        }
         AyesPercentage.RemoveAt(0);
         fetchedSuras.Enqueue(suraSFX[0]);
         suraSFX.RemoveAt(0);

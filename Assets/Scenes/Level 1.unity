@@ -178,6 +178,8 @@ MonoBehaviour:
   endPanel: {fileID: 63940870}
   levelStarted: 0
   levelFinished: 0
+  ayeText: {fileID: 584306409}
+  numberOfAyeBalloons: 2
   AyesPercentage:
   - 20
   - 30
@@ -185,7 +187,6 @@ MonoBehaviour:
   - 50
   - 60
   - 70
-  ayeText: {fileID: 584306409}
   surasTexts:
   - "\u0642\u064F\u0644\u0652 \u0623\u064E\u0639\u064F\u0648\u0630\u064F \u0628\u0650\u0631\u064E\u0628\u0650\u0651
     \u0627\u0644\u0646\u0651\u064E\u0627\u0633\u0650 "
@@ -2086,7 +2087,7 @@ MonoBehaviour:
   balloonPrefab: {fileID: 6042487911190633365, guid: eeb897887ddd9b84c9d8a55490a57907, type: 3}
   balloonPopAudioSource: {fileID: 1046089862}
   balloonsParent: {fileID: 2119014999}
-  numberOfBalloons: 100
+  numberOfBalloons: 50
 --- !u!1 &1649033106
 GameObject:
   m_ObjectHideFlags: 0

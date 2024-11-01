@@ -59,22 +59,22 @@
     <Compile Include="Assets\RTLTMPro\Scripts\Runtime\Types\TashkeelCharacters.cs" />
     <Compile Include="Assets\RTLTMPro\Scripts\Runtime\RichTextFixer.cs" />
     <Compile Include="Assets\RTLTMPro\Scripts\Runtime\RTLTextMeshPro3D.cs" />
+    <Compile Include="Assets\RTLTMPro\Scripts\Runtime\Types\ArabicGeneralLetters.cs" />
+    <Compile Include="Assets\RTLTMPro\Scripts\Runtime\FastStringBuilder.cs" />
+    <Compile Include="Assets\RTLTMPro\Scripts\Runtime\Char32Utils.cs" />
+    <Compile Include="Assets\RTLTMPro\Scripts\Runtime\Types\HinduNumbers.cs" />
+    <Compile Include="Assets\RTLTMPro\Scripts\Runtime\TextUtils.cs" />
+    <Compile Include="Assets\RTLTMPro\Scripts\Runtime\Types\SpecialCharacters.cs" />
     <Compile Include="Assets\RTLTMPro\Scripts\Runtime\RTLSupport.cs" />
     <Compile Include="Assets\RTLTMPro\Scripts\Runtime\Types\FarsiNumbers.cs" />
     <Compile Include="Assets\RTLTMPro\Scripts\Runtime\Types\EnglishNumbers.cs" />
     <Compile Include="Assets\RTLTMPro\Scripts\Runtime\RTLTextMeshPro.cs" />
-    <Compile Include="Assets\RTLTMPro\Scripts\Runtime\Types\ArabicGeneralLetters.cs" />
     <Compile Include="Assets\RTLTMPro\Scripts\Runtime\GlyphFixer.cs" />
     <Compile Include="Assets\RTLTMPro\Scripts\Runtime\TashkeelFixer.cs" />
     <Compile Include="Assets\RTLTMPro\Scripts\Runtime\Types\ArabicIsolatedLetters.cs" />
-    <Compile Include="Assets\RTLTMPro\Scripts\Runtime\FastStringBuilder.cs" />
     <Compile Include="Assets\RTLTMPro\Scripts\Runtime\TashkeelLocation.cs" />
-    <Compile Include="Assets\RTLTMPro\Scripts\Runtime\Char32Utils.cs" />
     <Compile Include="Assets\RTLTMPro\Scripts\Runtime\LigatureFixer.cs" />
     <Compile Include="Assets\RTLTMPro\Scripts\Runtime\GlyphTable.cs" />
-    <Compile Include="Assets\RTLTMPro\Scripts\Runtime\Types\HinduNumbers.cs" />
-    <Compile Include="Assets\RTLTMPro\Scripts\Runtime\TextUtils.cs" />
-    <Compile Include="Assets\RTLTMPro\Scripts\Runtime\Types\SpecialCharacters.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\RTLTMPro\Scripts\Runtime\RTLTMPro.asmdef" />

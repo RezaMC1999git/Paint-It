@@ -7,4 +7,5 @@ public class Balloon : MonoBehaviour
     public Animator balloonAnimator;
     public SpriteRenderer balloonSpriteRenderer;
     public CircleCollider2D balloonCollider;
+    public bool choosenBalloon;
 }
